@@ -124,3 +124,44 @@ function connectazure2() {
         document.querySelector('.azure-screen1').style.display = 'none';
     }, 1000); // Set to close after 1 second (1000 milliseconds)
 }
+
+function redirectToPlatformer() {
+    document.querySelector('.container').style.display = 'none';
+    document.querySelector('.redirecting-screen').style.display = 'block';
+    setTimeout(function () {
+        window.location.href = "https://play.unity.com/p/webgl-builds-390635/edit";
+    }, 600);
+
+    loadDud3();
+    loadBootstrap3();
+    loadData3();
+    initializeWebGL3();
+}
+
+function loadDud3() {
+    document.querySelector('.dud-screen').style.display = 'block';
+    setTimeout(function () {
+        document.querySelector('.bootstrap-screen').style.display = 'none';
+    }, 100); // Set to close after 1 second (1000 milliseconds)
+}
+
+function loadBootstrap3() {
+    document.querySelector('.bootstrap-screen').style.display = 'block';
+    setTimeout(function () {
+        document.querySelector('.bootstrap-screen').style.display = 'none';
+    }, 100); // Set to close after 1 second (1000 milliseconds)
+}
+
+function loadData3() {
+    document.querySelector('.data-screen').style.display = 'block';
+    setTimeout(function () {
+        document.querySelector('.data-screen').style.display = 'none';
+    }, 300); // Set to close after 3 seconds (3000 milliseconds)
+}
+
+function initializeWebGL3() {
+    document.querySelector('.webgl-screen').style.display = 'block';
+    setTimeout(function () {
+        document.querySelector('.webgl-screen').style.display = 'none';
+    }, 100); // Set to close after 1 second (1000 milliseconds)
+}
